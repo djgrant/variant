@@ -1,0 +1,25 @@
+{
+  "name": "variant-sass",
+  "version": "0.0.1",
+  "homepage": "https://github.com/djgrant/variant",
+  "authors": [
+    "Daniel John Grant",
+    "Oguz Huner"
+  ],
+  "description": "Build robust user interface split test",
+  "main": [
+    "assets/stylesheets/_variant.sass"
+  ],
+  "keywords": [
+    "sass",
+    "css",
+    "a/b testing",
+    "split testing"
+    "framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/*",
+    "!assets/**/*"
+  ]
+}

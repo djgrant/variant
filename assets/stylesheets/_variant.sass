@@ -1,0 +1,16 @@
+// Prevents errors when a variant isn't specified i.e. main stylesheets
+// but set !default to allow the value to be overwritten in variant styelsheets
+$variant: "main" !default
+
+=variant($_variants...)
+  @if length($_variants) == 0
+    @debug "You need to pass an argument into variant()"
+  @else
+    @each $_variant in $_variants
+      @if $_variant == $variant or $_variant == "all"
+        @content
+
+=variant-not($_variants...)
+  @each $_variant in $_variants
+    @if $_variant != $variant
+      @content
