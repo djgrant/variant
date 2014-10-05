@@ -27,10 +27,13 @@ $variant: "above-the-fold"
 2) Use a split testing framework to serve the control or variant stylesheets:
 
 ```
-<% ab_test("cart_animations", "stylesheets/main/main", "stylesheets/variants/above-the-fold") do |stylesheet| %>
+<% ab_test("purchase_flow", "go_to_basket", "skip_basket") do |test| %>
+  <% stylesheet = test == "control" ? "eagle/stylesheets/main/main" : "eagle/stylesheets/variants/skip-basket" %>
   <%= stylesheet_link_tag stylesheet, :media => 'screen' %>
 <% end %>
 ```
+
+Example using [https://github.com/andrew/split](https://github.com/andrew/split)
 
 ## Creating a variant interface
 
